@@ -465,7 +465,7 @@ ${rows.join('\n')}
     return (
       <div>
         <h3>
-          {submitted ? '✅ ' : null} Step 6: Submit your signed post to DID node
+          {submitted ? '✅ ' : null} Step 6: Submit your signed post to RSDS node
         </h3>
         <p>
           Your submission will be signed automatically using your private key
@@ -494,7 +494,7 @@ ${rows.join('\n')}
       <div>
         <h3>
           {downloadedContent ? '✅ ' : null}Congrats! You have submitted a post
-          to DID
+          via RSDS
         </h3>
         <p>
           Now you can{' '}
@@ -504,7 +504,7 @@ ${rows.join('\n')}
           on a public reader platform!
         </p>
         <p>
-          You can publish your own content and also share DID links created by
+          You can publish your own content and also share RSDS post links created by
           others using the integrated writer interface.
         </p>
         {done ? null : <button onClick={displayWriter}>Show me how!</button>}
@@ -515,7 +515,7 @@ ${rows.join('\n')}
   const renderWriter = () => {
     return (
       <div>
-        <h3>🖊️ Compose new DID post</h3>
+        <h3>🖊️ Compose your new post</h3>
         <label htmlFor="post">Your post:</label>
         <br />
         <textarea
@@ -529,7 +529,7 @@ ${rows.join('\n')}
         <button style={{ marginTop: 15 }} onClick={downloadSocialPost}>
           Download social post file
         </button>
-        <h3 style={{ marginTop: 15 }}>📤 Publish URL on DID network</h3>
+        <h3 style={{ marginTop: 15 }}>📤 Publish URL on RSDS protocol</h3>
         http://
         <input
           ref={pathInput2}
@@ -568,7 +568,7 @@ ${rows.join('\n')}
         <br />
         <textarea
           id="post"
-          placeholder="Hey there, this is my first post! I am happy to join the DID network!"
+          placeholder="Hey there, this is my first post! I am happy to join the RSDS network!"
           defaultValue={content}
           style={{ minWidth: 300, minHeight: 100 }}
           onChange={(e) => {
@@ -592,13 +592,13 @@ ${rows.join('\n')}
   const renderStart = () => {
     return (
       <div>
-        <h3>What is DID?</h3>
+        <h3>What is RSDS?</h3>
         <p>
-          DID is a <i>Decentralized Information Distribution</i> network, it
-          aggregates URLs of social media posts in a decentralized database.
-          Each social post is stored on the owner's domain and is published to
-          the DID network by signing it with the owner's private key. Are you
-          ready to write your first post?
+          RSDS is a novel decentralized information sharing protocol that empowers users
+          to own and distribute their content. Think of it like a decentralized Twitter
+          where data is entirely in the user's hands and where everyone is free to post
+          content and subscribe to new posts. It could be also be compared to decentralized
+          version of global RSS feed.
         </p>
         {started ? null : (
           <button
@@ -672,7 +672,7 @@ ${rows.join('\n')}
 
   return (
     <>
-      <h1>Submit your first social post to DID</h1>
+      <h1>Publish your post on RSDS network</h1>
       <Flipper flipKey={steps.join('')}>
         {steps.map((step) => (
           <Flipped key={step.id} flipId={step.id}>
