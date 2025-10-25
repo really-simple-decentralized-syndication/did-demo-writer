@@ -218,7 +218,7 @@ function App() {
     console.log(block.hash)
     const blockHash = block.hash
     const signature = key.sign(
-      jsSha.sha256([blockHash, postOwner, postPath, hash].join('/'))
+      jsSha.sha256([blockHash, postOwner.replace(/^www\./, ''), postPath, hash].join('/'))
     )
     const resp = await Api().submitPost(username, {
       domain: postOwner,
